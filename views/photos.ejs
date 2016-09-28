@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>我的皂片</title>
+    <link rel='stylesheet' href='/css/style.css' />
+  </head>
+  <body>
+  <div>
+    <% for(var i=0; i<photos.length; i++) {%>
+    <img src="<%=photos[i].photo_url %>" alt="" width="200" height="200">
+    <% } %>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/css/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+  <div>
+
+    <% if (typeof(user) !== 'undefined') { %>
+      <%=user.email%>
+    <button onclick="javascript:window.location.href='/signout'">退出</button>
+    <button onclick="javascript:window.location.href='/upload'">上传照片</button>
+    <button onclick="javascript:window.location.href='/getMyPhotos'">我的皂片</button>
+    <%}else{%>
+      <button onclick="javascript:window.location.href='/signin'">登录</button>
+      <button onclick="javascript:window.location.href='/signup'">注册</button>
+    <%}%>
+  </div>
+
+
+  <div>
+    <% for(var i=0; i<photos.length; i++) {%>
+    <img src="<%=photos[i].photo_url %>" alt="" width="300" height="300">
+    <% } %>
+  </div>
+
+  </body>
+</html>

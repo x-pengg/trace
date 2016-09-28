@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>signup</title>
+    <link rel='stylesheet' href='/css/style.css' />
+  </head>
+  <body>
+  <div>
+    <% if (typeof(error) !== 'undefined' && error){ %>
+      <strong><%= error %></strong>
+    <%} %>
+  </div>
+  <form action="/signup" method="post">
+    <input type="text" placeholder="nickname" name="name">
+    <input type="email" placeholder="email" name="email">
+    <input type="text" placeholder="password" name="pass">
+    <input type="text" placeholder="url" name="url">
+    <input type="location" placeholder="location" name="location">
+    <button>submit</button>
+  </form>
+  </body>
+</html>

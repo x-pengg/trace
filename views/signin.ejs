@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>signin</title>
+    <link rel='stylesheet' href='/css/style.css' />
+  </head>
+  <body>
+  <div>
+    <% if (typeof(error) !== 'undefined' && error){ %>
+    <strong><%= error %>&times;</strong>
+    <%} %>
+  </div>
+  <form action="/signin" method="post">
+    <input type="text" placeholder="username" name="email">
+    <input type="password" placeholder="password" name="pass">
+    <button>submit</button>
+  </form>
+  </body>
+</html>
